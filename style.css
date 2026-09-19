@@ -1,22 +1,16 @@
-/* ==========================================================
-   طبلية زمان - موسوعة الأكلات المصرية الأصيلة
-   تصميم CSS3 نقي 100% (Pure HTML & CSS - Zero JavaScript)
-   ========================================================== */
-
-/* --- متغيّرات الألوان والتصميم (Design Tokens) --- */
 :root {
-  /* Warm Egyptian Palette (ألوان الطين الفخاري والزعفران والملوخية) */
-  --primary: #c2410c;          /* لون الطين الفخاري المحروق / التراكوتا */
+
+  --primary: #c2410c;         
   --primary-hover: #9a3412;
   --primary-light: #ffedd5;
   
-  --secondary: #d97706;        /* ذهبي الزعفران الدافئ */
+  --secondary: #d97706;       
   --secondary-hover: #b45309;
   
-  --accent-green: #15803d;     /* أخضر الملوخية والنعناع البلدي */
+  --accent-green: #15803d;     
   --accent-green-light: #dcfce7;
   
-  /* ألوان الوضع النهاري الدافئ (Light / Warm Cream) */
+  
   --bg-main: #fdfbf7;
   --bg-surface: #ffffff;
   --bg-surface-alt: #f8f4ee;
@@ -27,7 +21,7 @@
   --text-muted: #6b5e52;
   --text-light: #ffffff;
   
-  /* الظلال والتأثيرات */
+ 
   --shadow-sm: 0 2px 8px rgba(38, 33, 29, 0.05);
   --shadow-md: 0 8px 24px rgba(38, 33, 29, 0.08);
   --shadow-lg: 0 16px 36px rgba(38, 33, 29, 0.12);
@@ -43,14 +37,14 @@
   --font-body: 'Tajawal', system-ui, -apple-system, sans-serif;
 }
 
-/* زر الـ Checkbox الخفي للوضع الليلي النقي بـ CSS */
+
 .theme-checkbox {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-/* تفعيل الوضع الليلي الفاخر عند تفعيل الـ Checkbox بدون أي جافاسكريبت */
+
 body:has(#theme-toggle:checked) .site-wrapper,
 #theme-toggle:checked ~ .site-wrapper {
   --bg-main: #12161a;
@@ -68,7 +62,7 @@ body:has(#theme-toggle:checked) .site-wrapper,
   --shadow-hover: 0 20px 40px rgba(217, 119, 6, 0.25);
 }
 
-/* تبديل أيقونة الشمس والقمر في الوضع الليلي */
+
 .sun-icon {
   display: none;
 }
@@ -82,7 +76,7 @@ body:has(#theme-toggle:checked) .moon-icon,
   display: none;
 }
 
-/* إعادة التهيئة والأساسيات */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -130,7 +124,7 @@ img {
   display: block;
 }
 
-/* الحاوية الأساسية */
+
 .container {
   width: 100%;
   max-width: 1240px;
@@ -138,7 +132,7 @@ img {
   padding: 0 24px;
 }
 
-/* الزخارف الخلفية الجمالية */
+
 .bg-ornaments {
   position: absolute;
   top: 0;
@@ -181,7 +175,7 @@ img {
   right: -100px;
 }
 
-/* --- ترويسة الموقع (Header) --- */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -289,7 +283,7 @@ body:has(#theme-toggle:checked) .site-header,
   gap: 14px;
 }
 
-/* زر تبديل الثيم النقي بـ CSS */
+
 .theme-switch-label {
   width: 44px;
   height: 44px;
@@ -312,7 +306,7 @@ body:has(#theme-toggle:checked) .site-header,
   transform: rotate(15deg);
 }
 
-/* الأزرار (Buttons) */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -360,7 +354,7 @@ body:has(#theme-toggle:checked) .site-header,
   font-size: 1.1rem;
 }
 
-/* --- القسم الترحيبي (Hero Section) --- */
+
 .hero-section {
   position: relative;
   padding: 70px 0 90px;
@@ -457,7 +451,7 @@ body:has(#theme-toggle:checked) .hero-tag,
   background-color: var(--border-color);
 }
 
-/* الصورة الترحيبية للطبق الرئيسي */
+
 .hero-visual {
   position: relative;
 }
@@ -493,7 +487,7 @@ body:has(#theme-toggle:checked) .hero-tag,
   transform: scale(1.02);
 }
 
-/* البطاقات العائمة */
+
 .floating-badge {
   position: absolute;
   z-index: 2;
@@ -556,7 +550,7 @@ body:has(#theme-toggle:checked) .hero-tag,
   100% { transform: translateY(-12px); }
 }
 
-/* --- شريط تصنيفات الأكلات (Anchor Navigation Bar) --- */
+
 .category-nav-bar {
   position: sticky;
   top: 80px;
@@ -602,7 +596,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   box-shadow: 0 4px 14px rgba(194, 65, 12, 0.3);
 }
 
-/* --- أقسام الأكلات (Menu Sections) --- */
+
 .menu-section {
   padding: 80px 0;
   position: relative;
@@ -646,7 +640,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   color: var(--text-muted);
 }
 
-/* شبكة بطاقات الأكلات (Food Grid) */
+
 .food-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -782,8 +776,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   border-radius: var(--radius-md);
 }
 
-/* --- النوافذ المنبثقة التفاعلية بـ Pure CSS (:target) --- */
-/* تعمل بنسبة 100% بدون جافاسكريبت نهائياً */
+
 .css-modal {
   position: fixed;
   inset: 0;
@@ -801,7 +794,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* الحالة النشطة عند النقر على رابط النافذة */
+
 .css-modal:target {
   opacity: 1;
   visibility: visible;
@@ -850,7 +843,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   transform: rotate(90deg);
 }
 
-/* محتوى تفاصيل النافذة المنبثقة */
+
 .modal-hero {
   position: relative;
   height: 300px;
@@ -1001,7 +994,7 @@ body:has(#theme-toggle:checked) .category-nav-bar,
   line-height: 1.7;
 }
 
-/* --- قسم حكاية المطبخ (History) --- */
+
 .history-section {
   padding: 80px 0;
   position: relative;
@@ -1082,7 +1075,7 @@ body:has(#theme-toggle:checked) .timeline-badge,
   color: var(--text-muted);
 }
 
-/* --- قسم أسرار الصنعة (Secrets) --- */
+
 .secrets-section {
   padding: 80px 0 100px;
   position: relative;
@@ -1135,7 +1128,7 @@ body:has(#theme-toggle:checked) .timeline-badge,
   line-height: 1.7;
 }
 
-/* --- التذييل (Footer) --- */
+
 .site-footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border-color);
@@ -1169,7 +1162,7 @@ body:has(#theme-toggle:checked) .timeline-badge,
   width: 100%;
 }
 
-/* --- استجابة الشاشات (Responsive) --- */
+
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1198,7 +1191,7 @@ body:has(#theme-toggle:checked) .timeline-badge,
 
 @media (max-width: 768px) {
   .nav-list {
-    display: none; /* شاشات الهاتف الصغيرة */
+    display: none; 
   }
   
   .hero-title {
